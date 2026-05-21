@@ -32,7 +32,7 @@
         >
           <v-sheet rounded="lg" class="pa-3 flex-grow-1 overlap-date-tile">
             <div class="text-body-2 font-weight-medium mb-1">
-              {{ entry.date }}
+              {{ formatDate(entry.date) }}
             </div>
             <div class="d-flex flex-wrap gap-1">
               <v-chip
@@ -63,6 +63,16 @@ const props = defineProps({
     default: () => [],
   },
 });
+
+// Format YYYY-MM-DD to "Month D, YYYY" (e.g. June 9, 2026)
+function formatDate(dateStr) {
+  const [year, month, day] = dateStr.split("-").map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
 
 // Utility: return contrasting text color (black/white) based on luminance
 function chipStyle(hex) {
