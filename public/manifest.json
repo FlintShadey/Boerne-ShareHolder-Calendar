@@ -1,0 +1,21 @@
+{
+  "name": "Boerne ShareHolder Availability Calendar",
+  "short_name": "Boerne Calendar",
+  "description": "Multi-user availability calendar for Boerne ShareHolders",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C62828",
+  "icons": [
+    {
+      "src": "/boerne-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/boerne-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
